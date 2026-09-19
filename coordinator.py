@@ -34,6 +34,7 @@ from .const import (
 )
 from clevertouch import (
     Account,
+    ApiSession,
     Home,
     User,
     ApiAuthError,
@@ -71,6 +72,15 @@ class CleverTouchUpdateCoordinator(DataUpdateCoordinator[None]):
         self.host = self.model.url
         self.account: Account = Account(
             self._email, entry.data[CONF_TOKEN], host=self.host, session=session
+        )
+        # Account does not accept an OpenID realm, so replace its API session
+        # with one that authenticates against the realm for this model.
+        self.account.api = ApiSession(
+            self._email,
+            entry.data[CONF_TOKEN],
+            host=self.host,
+            manufacturer=self.model.realm,
+            session=session,
         )
         self.user: User | None = None
         self.homes: dict[str, Home] = {}
@@ -156,13 +166,18 @@ class CleverTouchEntity(CoordinatorEntity[CleverTouchUpdateCoordinator]):
         super().__init__(coordinator)
         self.device: Device = device
 
+        # Some brands (e.g. Fenix) leave device labels empty, so build the
+        # name from whatever parts are available.
+        name_parts = [device.zone.label, device.label]
+        name = " ".join(part for part in name_parts if part) or device.device_id
+
         self._attr_device_info = DeviceInfo(
             identifiers={(DOMAIN, f"{coordinator.model_id}_{device.device_id}")},
             manufacturer=coordinator.model.manufacturer,
             model=f"{device.device_type}",
-            name=f"{device.zone.label} {device.label}",
+            name=name,
             via_device=(DOMAIN, coordinator.get_unique_home_id(device.home.home_id)),
-            suggested_area=device.zone.label,
+            suggested_area=device.zone.label or None,
         )
 
     @property

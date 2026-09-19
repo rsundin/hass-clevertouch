@@ -73,7 +73,9 @@ async def validate_input(hass: HomeAssistant, data: dict[str, Any]) -> dict[str,
 
     session = async_get_clientsession(hass)
 
-    async with ApiSession(host=host, session=session) as api:
+    async with ApiSession(
+        host=host, manufacturer=model.realm, session=session
+    ) as api:
         try:
             await api.authenticate(username, password)
         except ApiAuthError as ex:
