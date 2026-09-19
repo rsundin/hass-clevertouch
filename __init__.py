@@ -40,7 +40,7 @@ async def async_setup_entry(hass: HomeAssistant, entry: ConfigEntry) -> bool:
     for home_id, home in coordinator.homes.items():
         # The home label may be missing for some brands (e.g. Fenix)
         home_label = home.info.label or "Home"
-        reg.async_get_or_create(
+        home_device = reg.async_get_or_create(
             config_entry_id=entry.entry_id,
             identifiers={(DOMAIN, coordinator.get_unique_home_id(home_id))},
             manufacturer=coordinator.model.manufacturer,
@@ -49,6 +49,7 @@ async def async_setup_entry(hass: HomeAssistant, entry: ConfigEntry) -> bool:
             suggested_area=home.info.label or None,
             configuration_url=f"https://{coordinator.host}",
         )
+        coordinator.home_device_ids[home_id] = home_device.id
 
     await hass.config_entries.async_forward_entry_setups(entry, PLATFORMS)
 

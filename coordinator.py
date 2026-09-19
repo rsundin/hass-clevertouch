@@ -84,6 +84,9 @@ class CleverTouchUpdateCoordinator(DataUpdateCoordinator[None]):
         )
         self.user: User | None = None
         self.homes: dict[str, Home] = {}
+        # Device registry ids of the home (controller) devices, keyed by home id.
+        # Populated during setup so entities can link to their home via_device_id.
+        self.home_device_ids: dict[str, str] = {}
         self._quick_updates = QuickUpdatesController(
             standard_interval=timedelta(seconds=DEFAULT_SCAN_INTERVAL_SECONDS),
             quick_interval=timedelta(seconds=QUICK_SCAN_INTERVAL_SECONDS),
@@ -176,9 +179,13 @@ class CleverTouchEntity(CoordinatorEntity[CleverTouchUpdateCoordinator]):
             manufacturer=coordinator.model.manufacturer,
             model=f"{device.device_type}",
             name=name,
-            via_device=(DOMAIN, coordinator.get_unique_home_id(device.home.home_id)),
             suggested_area=device.zone.label or None,
         )
+        # `via_device` is deprecated since HA 2026.8 and raises on some code paths;
+        # link to the home device by registry id instead.
+        home_device_id = coordinator.home_device_ids.get(device.home.home_id)
+        if home_device_id:
+            self._attr_device_info["via_device_id"] = home_device_id
 
     @property
     def unique_id(self) -> str | None:

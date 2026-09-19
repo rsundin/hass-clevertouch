@@ -1,0 +1,221 @@
+- generic [ref=f4e15]:
+  - generic [ref=f4e17]:
+    - generic [ref=f4e18]:
+      - generic "Sidebar toggle" [ref=f4e20]:
+        - button "Sidebar toggle" [ref=f4e21] [cursor=pointer]
+      - generic [ref=f4e24]: Home Assistant
+    - generic [ref=f4e25]:
+      - navigation [ref=f4e28]:
+        - list [ref=f4e29]:
+          - generic [ref=f4e30]:
+            - listitem [ref=f4e31] [cursor=pointer]:
+              - link "Overview" [ref=f4e32]:
+                - /url: /home
+            - listitem [ref=f4e39] [cursor=pointer]:
+              - link "Cameras" [ref=f4e40]:
+                - /url: /dashboard-cameras
+            - listitem [ref=f4e47] [cursor=pointer]:
+              - link "Car" [ref=f4e48]:
+                - /url: /dashboard-car
+            - listitem [ref=f4e55] [cursor=pointer]:
+              - link "Devices" [ref=f4e56]:
+                - /url: /dashboard-devices
+            - listitem [ref=f4e63] [cursor=pointer]:
+              - link "Garden" [ref=f4e64]:
+                - /url: /dashboard-garden
+            - listitem [ref=f4e71] [cursor=pointer]:
+              - link "Lights dashboard" [ref=f4e72]:
+                - /url: /test-dashboard
+            - listitem [ref=f4e79] [cursor=pointer]:
+              - link "Map" [ref=f4e80]:
+                - /url: /map
+            - listitem [ref=f4e86] [cursor=pointer]:
+              - link "Temperatures" [ref=f4e87]:
+                - /url: /dashboard-temperatures
+            - listitem [ref=f4e94] [cursor=pointer]:
+              - link "Energy" [ref=f4e95]:
+                - /url: /energy
+            - listitem [ref=f4e101] [cursor=pointer]:
+              - link "Activity" [ref=f4e102]:
+                - /url: /logbook
+            - listitem [ref=f4e108] [cursor=pointer]:
+              - link "History" [ref=f4e109]:
+                - /url: /history
+            - listitem [ref=f4e115] [cursor=pointer]:
+              - link "Calendar" [ref=f4e116]:
+                - /url: /calendar
+            - listitem [ref=f4e122] [cursor=pointer]:
+              - link "File editor" [ref=f4e123]:
+                - /url: /core_configurator
+            - listitem [ref=f4e130] [cursor=pointer]:
+              - link "HACS" [ref=f4e131]:
+                - /url: /hacs
+            - listitem [ref=f4e138] [cursor=pointer]:
+              - link "Media" [ref=f4e139]:
+                - /url: /media-browser
+            - listitem [ref=f4e145] [cursor=pointer]:
+              - link "To-do lists" [ref=f4e146]:
+                - /url: /todo
+      - navigation [ref=f4e153]:
+        - list [ref=f4e154]:
+          - generic [ref=f4e155]:
+            - listitem [ref=f4e156] [cursor=pointer]:
+              - link "5 Settings 5" [ref=f4e157]:
+                - /url: /config
+                - generic [ref=f4e158]: "5"
+                - generic [ref=f4e160]: Settings
+                - generic [ref=f4e163]: "5"
+            - listitem [ref=f4e165] [cursor=pointer]:
+              - button "Notifications" [ref=f4e166]
+            - listitem [ref=f4e172] [cursor=pointer]:
+              - link "Steven Holmes" [ref=f4e173]:
+                - /url: /profile
+  - iframe [ref=f4e183]:
+    - generic [ref=f5e1]:
+      - generic [active]:
+        - generic [ref=f5e990]:
+          - generic [ref=f5e991]:
+            - generic "Back" [ref=f5e994]:
+              - button "Back" [ref=f5e995] [cursor=pointer]
+            - generic [ref=f5e998]: clevertouch
+            - generic "Overflow menu" [ref=f5e1001]:
+              - button "Overflow menu" [ref=f5e1002] [cursor=pointer]
+          - generic [ref=f5e1005]:
+            - generic:
+              - generic [ref=f5e1007]:
+                - generic:
+                  - generic [ref=f5e1008]:
+                    - generic:
+                      - link [ref=f5e1009] [cursor=pointer]:
+                        - /url: https://github.com/hemphen
+                        - generic "Author" [ref=f5e1010]:
+                          - text: "@hemphen"
+                          - button "hemphen" [ref=f5e1012]
+                      - generic "Stars" [ref=f5e1017] [cursor=pointer]:
+                        - text: "0"
+                        - button "0" [ref=f5e1019]
+                      - link [ref=f5e1024] [cursor=pointer]:
+                        - /url: https://github.com/steg/hass-clevertouch/issues
+                        - generic "Open issues" [ref=f5e1025]:
+                          - text: "0"
+                          - button "0" [ref=f5e1027]
+                  - generic [ref=f5e1033]:
+                    - heading "CleverTouch - Home Assistant integration for Touch E3 radiators" [level=1] [ref=f5e1034]
+                    - blockquote [ref=f5e1035]:
+                      - paragraph [ref=f5e1036]:
+                        - emphasis [ref=f5e1037]:
+                          - strong [ref=f5e1038]: IMPORTANT!
+                      - paragraph [ref=f5e1039]: This is not an officially supported integration nor software library. There are no guarantees that the functionality will work as expected.
+                      - paragraph [ref=f5e1040]:
+                        - text: Take caution especially when automating device
+                        - emphasis [ref=f5e1041]: configuration
+                        - text: .
+                      - paragraph [ref=f5e1042]:
+                        - emphasis [ref=f5e1043]:
+                          - strong [ref=f5e1044]: THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND
+                    - heading "Background" [level=2] [ref=f5e1045]
+                    - paragraph [ref=f5e1046]:
+                      - text: Yali Digital, Parada and Ramo is range of radiators from the Finnish company Purmo(*). The radiators may be monitored and controlled
+                      - emphasis [ref=f5e1047]: centrally
+                      - text: and wirelessly using the optional accessory TempCo Touch E3. The Touch E3 may in turn be controlled
+                      - emphasis [ref=f5e1048]: remotely
+                      - text: via a CleverTouch cloud account and related mobile and web apps.
+                    - paragraph [ref=f5e1049]: This Home Assistant integration provides access to settings and usage data for homes and radiators accessible through CleverTouch accounts.
+                    - paragraph [ref=f5e1050]: (*) Purmo has aquired several brands over time, and the radiator manufacturer might be known as e g LVI, Radson or Finimetal on local markets.
+                    - heading "Other brands" [level=2] [ref=f5e1051]
+                    - paragraph [ref=f5e1052]: While untested, a number of other product lines seem to be using the same controller software with different branding.
+                    - paragraph [ref=f5e1053]: Applications using the following URLs might work, fully or partially.
+                    - list [ref=f5e1054]:
+                      - listitem [ref=f5e1055]:
+                        - text: Walter Meier Metalplast smart-comfort -
+                        - link "https://www.smartcomfort.waltermeier.com" [ref=f5e1056] [cursor=pointer]:
+                          - /url: https://www.smartcomfort.waltermeier.com
+                      - listitem [ref=f5e1057]:
+                        - text: Frico PF Smart -
+                        - link "https://fricopfsmart.frico.se" [ref=f5e1058] [cursor=pointer]:
+                          - /url: https://fricopfsmart.frico.se
+                      - listitem [ref=f5e1059]:
+                        - text: Fenix V24 Wifi -
+                        - link "https://v24.fenixgroup.eu" [ref=f5e1060] [cursor=pointer]:
+                          - /url: https://v24.fenixgroup.eu
+                      - listitem [ref=f5e1061]:
+                        - text: Vogel & Noot E3 App - [Vogel & Noot E3 App -
+                        - link "https://e3.vogelundnoot.com" [ref=f5e1062] [cursor=pointer]:
+                          - /url: https://e3.vogelundnoot.com
+                      - listitem [ref=f5e1063]:
+                        - text: CordiVari My Way Cosy Home -
+                        - link "https://cordivarihome.com" [ref=f5e1064] [cursor=pointer]:
+                          - /url: https://cordivarihome.com
+                    - heading "Installation" [level=2] [ref=f5e1065]
+                    - paragraph [ref=f5e1066]: "The integration can be installed in three different ways:"
+                    - heading "1. Using HACS" [level=3] [ref=f5e1067]
+                    - paragraph [ref=f5e1068]:
+                      - text: The repository is not included in HACS by default, but it may be added as a custom repository by following the
+                      - link "HACS documentation" [ref=f5e1069] [cursor=pointer]:
+                        - /url: https://hacs.xyz/docs/faq/custom_repositories/
+                      - text: .
+                    - heading "2. Cloning the Github repository" [level=3] [ref=f5e1070]
+                    - paragraph [ref=f5e1071]:
+                      - text: The repository files should be placed in the sub-directory
+                      - code [ref=f5e1072]: custom_components/clevertouch
+                      - text: of the HomeAssistant configuration directory.
+                    - list [ref=f5e1073]:
+                      - listitem [ref=f5e1074]:
+                        - text: Create the
+                        - code [ref=f5e1075]: custom_components
+                        - text: directory if it doesn't already exist.
+                      - listitem [ref=f5e1076]:
+                        - code [ref=f5e1077]: cd
+                        - text: to the folder.
+                      - listitem [ref=f5e1078]: Run the command
+                    - code [ref=f5e1080]: git clone https://github.com/hemphen/hass-clevertouch.git clevertouch
+                    - list [ref=f5e1081]:
+                      - listitem [ref=f5e1082]: Restart HomeAssistant.
+                      - listitem [ref=f5e1083]: Add the integration via the GUI.
+                    - paragraph [ref=f5e1084]:
+                      - text: Please note that this will clone the latest code changes in the main branch, which may not always be fully stable or tested. To install a specific release, add a
+                      - code [ref=f5e1085]: "--branch"
+                      - text: flag to the
+                      - code [ref=f5e1086]: clone
+                      - text: command, e.g
+                    - code [ref=f5e1088]: git clone https://github.com/hemphen/hass-clevertouch.git clevertouch --branch v0.2.4
+                    - heading "3. Manually downloading a release file" [level=3] [ref=f5e1089]
+                    - paragraph [ref=f5e1090]:
+                      - text: Download the
+                      - code [ref=f5e1091]: source.zip
+                      - text: file for any release from Github and extract the contents into the
+                      - code [ref=f5e1092]: custom_components/clevertouch
+                      - text: directory within the HomeAssistant config directory.
+                    - heading "Usage" [level=2] [ref=f5e1093]
+                    - paragraph [ref=f5e1094]: The intergration is configurable from the HomeAssistant GUI. Once installed correctly, it should appear in the list of integrations. Enter username (email) and password for the CleverTouch account during setup.
+                    - paragraph [ref=f5e1095]: After congfiguration, all available homes and radiators will be added as devices, with temperature settings added as entities.
+                    - paragraph [ref=f5e1096]: To avoid calling the API too excessively information is updated every three minutes.
+                    - heading "Unsupported features" [level=3] [ref=f5e1097]
+                    - list [ref=f5e1098]:
+                      - listitem [ref=f5e1099]: Installation-wide settings are not available.
+                      - listitem [ref=f5e1100]: Schedules for radiators running in program mode are not available.
+                    - heading "API" [level=2] [ref=f5e1101]
+                    - paragraph [ref=f5e1102]:
+                      - text: The API used to communicate with the CleverTouch account is located in a stand-alone repository
+                      - link "https://github.com/hemphen/clevertouch" [ref=f5e1103] [cursor=pointer]:
+                        - /url: https://github.com/hemphen/clevertouch
+                      - text: and is also available on PyPi.
+              - button "Download" [ref=f5e1105] [cursor=pointer]
+        - alertdialog [ref=f5e1109]:
+          - generic [ref=f5e1110]:
+            - heading "clevertouch" [level=2] [ref=f5e1112]
+            - generic [ref=f5e1114]:
+              - paragraph [ref=f5e1115]:
+                - text: Version
+                - code [ref=f5e1116]: v0.5.1
+                - text: will be downloaded
+              - generic [ref=f5e1117]:
+                - text: When downloaded, this will be located in
+                - code [ref=f5e1118]: "'/config/custom_components/clevertouch'"
+                - paragraph [ref=f5e1119]: Remember that you need to restart Home Assistant before changes to integrations (custom_components) are applied.
+              - generic [ref=f5e1120]:
+                - text: Fetching releases...
+                - button "Need a different version?" [ref=f5e1122] [cursor=pointer]
+            - contentinfo [ref=f5e1126]:
+              - button "Cancel" [ref=f5e1129]
+              - button "Download" [ref=f5e1133]

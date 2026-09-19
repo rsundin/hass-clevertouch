@@ -1,0 +1,77 @@
+- generic [ref=f4e15]:
+  - generic [ref=f4e17]:
+    - generic [ref=f4e18]:
+      - generic "Sidebar toggle" [ref=f4e20]:
+        - button "Sidebar toggle" [ref=f4e21] [cursor=pointer]
+      - generic [ref=f4e24]: Home Assistant
+    - generic [ref=f4e25]:
+      - navigation [ref=f4e28]:
+        - list [ref=f4e29]:
+          - generic [ref=f4e30]:
+            - listitem [ref=f4e31] [cursor=pointer]:
+              - link "Overview" [ref=f4e32]:
+                - /url: /home
+            - listitem [ref=f4e39] [cursor=pointer]:
+              - link "Cameras" [ref=f4e40]:
+                - /url: /dashboard-cameras
+            - listitem [ref=f4e47] [cursor=pointer]:
+              - link "Car" [ref=f4e48]:
+                - /url: /dashboard-car
+            - listitem [ref=f4e55] [cursor=pointer]:
+              - link "Devices" [ref=f4e56]:
+                - /url: /dashboard-devices
+            - listitem [ref=f4e63] [cursor=pointer]:
+              - link "Garden" [ref=f4e64]:
+                - /url: /dashboard-garden
+            - listitem [ref=f4e71] [cursor=pointer]:
+              - link "Lights dashboard" [ref=f4e72]:
+                - /url: /test-dashboard
+            - listitem [ref=f4e79] [cursor=pointer]:
+              - link "Map" [ref=f4e80]:
+                - /url: /map
+            - listitem [ref=f4e86] [cursor=pointer]:
+              - link "Temperatures" [ref=f4e87]:
+                - /url: /dashboard-temperatures
+            - listitem [ref=f4e94] [cursor=pointer]:
+              - link "Energy" [ref=f4e95]:
+                - /url: /energy
+            - listitem [ref=f4e101] [cursor=pointer]:
+              - link "Activity" [ref=f4e102]:
+                - /url: /logbook
+            - listitem [ref=f4e108] [cursor=pointer]:
+              - link "History" [ref=f4e109]:
+                - /url: /history
+            - listitem [ref=f4e115] [cursor=pointer]:
+              - link "Calendar" [ref=f4e116]:
+                - /url: /calendar
+            - listitem [ref=f4e122] [cursor=pointer]:
+              - link "File editor" [ref=f4e123]:
+                - /url: /core_configurator
+            - listitem [ref=f4e130] [cursor=pointer]:
+              - link "HACS" [ref=f4e131]:
+                - /url: /hacs
+            - listitem [ref=f4e138] [cursor=pointer]:
+              - link "Media" [ref=f4e139]:
+                - /url: /media-browser
+            - listitem [ref=f4e145] [cursor=pointer]:
+              - link "To-do lists" [ref=f4e146]:
+                - /url: /todo
+      - navigation [ref=f4e153]:
+        - list [ref=f4e154]:
+          - generic [ref=f4e155]:
+            - listitem [ref=f4e156] [cursor=pointer]:
+              - link "5 Settings 5" [ref=f4e157]:
+                - /url: /config
+                - generic [ref=f4e158]: "5"
+                - generic [ref=f4e160]: Settings
+                - generic [ref=f4e163]: "5"
+            - listitem [ref=f4e165] [cursor=pointer]:
+              - button "Notifications" [ref=f4e166]
+            - listitem [ref=f4e172] [cursor=pointer]:
+              - link "Steven Holmes" [ref=f4e173]:
+                - /url: /profile
+  - iframe [ref=f4e183]:
+    - generic [ref=f5e975]:
+      - generic "Back" [ref=f5e978]:
+        - button "Back" [ref=f5e979] [cursor=pointer]
+      - progressbar "Loading" [ref=f5e984]
