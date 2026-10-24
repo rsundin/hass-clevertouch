@@ -30,7 +30,10 @@ async def async_setup_entry(hass: HomeAssistant, entry: ConfigEntry) -> bool:
 
     session = async_get_clientsession(hass)
     coordinator = CleverTouchUpdateCoordinator(hass, entry=entry, session=session)
-    await coordinator.async_refresh()
+    # Raises ConfigEntryNotReady on failure so Home Assistant retries the setup.
+    # With async_refresh() a failed first fetch left the entry loaded without
+    # devices or entities, and without listeners the coordinator never polled again.
+    await coordinator.async_config_entry_first_refresh()
 
     hass.data.setdefault(DOMAIN, {})
     hass.data[DOMAIN][entry.entry_id] = coordinator
